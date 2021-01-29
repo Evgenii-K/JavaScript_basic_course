@@ -2,6 +2,7 @@
 
 let mover = {
     getDirection() {
+        // Добавляем возможность ходить по диагонали
         const availableDirection = [1, 2, 3, 4, 6, 7, 8, 9];
         while (true) {
             let direction = +prompt('Введите число, куда вы хотите переместиться. "Отмена" для выхода', '');
@@ -21,6 +22,8 @@ let mover = {
             x: player.x,
             y: player.y
         };
+
+        // Добавляем проверку не будет ли следующий ход в стенку
 
         if ( (player.y === 0 && [7, 8, 9].includes(direction)) || 
         ((player.y === (config.rowsCount - 1)) && [1, 2, 3].includes(direction)) ||
