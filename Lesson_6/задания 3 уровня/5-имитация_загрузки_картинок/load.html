@@ -47,12 +47,6 @@
 
         const img = document.querySelectorAll('img');
 
-        function setImg() {
-            for (let [key, el] of img.entries()) {
-                el.setAttribute('src', `images/${key+1}.jpg`);
-            }
-        }
-
         setTimeout(function () {
             for (let [key, el] of img.entries()) {
                 el.setAttribute('src', `images/${key+1}.jpg`);
